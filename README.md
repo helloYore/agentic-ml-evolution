@@ -35,13 +35,16 @@ Standard LLM agent loops fail at iteration 4–6 because the model "forgets" wha
 
 ```
 hermes-ml-evolution/
-├── README.md                          ← You are here
-├── v1_house_prices/                   ← MVP: Kaggle regression benchmark
-│   ├── prompt_state_machine.md        ← Reusable state machine prompt
-│   └── evolution_report.md            ← Full 10-round experiment log
-└── v2_fraud_detection/                ← Extended: Financial fraud detection
-    ├── prompt_state_machine.md        ← Fraud-adapted state machine prompt
-    └── PLAN.md                        ← Design doc for fraud-specific adaptations
+├── README.md
+├── skills/
+│   └── kaggle.md                      ← Importable Hermes skill (plug-and-play)
+├── v1_house_prices/                   ← Kaggle regression benchmark
+│   ├── prompt_state_machine.md        ← V1: 10-round, submit every round
+│   ├── prompt_v4_advanced.md          ← V4: EDA-first, convergence, CV Std tracking
+│   └── evolution_report.md            ← Full 10-round experiment log with results
+└── v2_fraud_detection/                ← Financial fraud detection (IEEE-CIS)
+    ├── prompt_state_machine.md        ← Fraud-adapted prompt (AUC, time-based CV)
+    └── PLAN.md                        ← Design doc: velocity features, imbalance handling
 ```
 
 ---
